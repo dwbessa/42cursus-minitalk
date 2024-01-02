@@ -6,7 +6,7 @@
 /*   By: dbessa <dbessa@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:21:25 by dbessa            #+#    #+#             */
-/*   Updated: 2023/10/24 19:05:55 by dbessa           ###   ########.fr       */
+/*   Updated: 2024/01/02 14:02:52 by dbessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,9 @@ char	**ft_split(char const *s, char c)
 	int		index;
 	char	**split;
 
-	if (!s)
-		return (NULL);
 	split = malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!split)
-		return (NULL);
+	if (!s || !split)
+		return (0);
 	i = 0;
 	j = 0;
 	index = -1;
