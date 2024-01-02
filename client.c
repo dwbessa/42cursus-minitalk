@@ -6,7 +6,7 @@
 /*   By: dbessa <dbessa@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 11:07:12 by dbessa            #+#    #+#             */
-/*   Updated: 2024/01/02 13:22:08 by dbessa           ###   ########.fr       */
+/*   Updated: 2024/01/02 20:01:27 by dbessa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,12 @@ int	main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		ft_printf("Number of arguments invalid!");
+		ft_printf("Invalid number of arguments, try again.\n");
 		exit(EXIT_FAILURE);
 	}
 	if (check_invalid_pid(argv[1]))
 	{
-		ft_printf("PIDs are composed of digits only.\n");
+		ft_printf("Only numbers allowed por PIDs, try again.\n");
 		exit(EXIT_FAILURE);
 	}
 	pid = ft_atoi(argv[1]);
