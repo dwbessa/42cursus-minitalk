@@ -6,7 +6,7 @@
 #    By: dbessa <dbessa@student.42.rio>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/23 21:45:07 by vde-vasc          #+#    #+#              #
-#    Updated: 2024/01/02 13:25:30 by dbessa           ###   ########.fr        #
+#    Updated: 2024/01/03 12:34:37 by dbessa           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,10 +23,10 @@ $(NAMELIB):
 	cp $(LIBFT) ./ 
 
 $(CLIENT): $(NAMELIB)
-	gcc -Wall -Wextra -Werror client.c $(NAMELIB) -o $(CLIENT)
+	cc -Wall -Wextra -Werror client.c $(NAMELIB) -o $(CLIENT)
 
 $(SERVER): $(NAMELIB)
-	gcc -Wall -Wextra -Werror server.c $(NAMELIB) -o $(SERVER)
+	cc -Wall -Wextra -Werror server.c $(NAMELIB) -o $(SERVER)
 
 clean:
 	@$(MAKE) fclean -C ./libft
